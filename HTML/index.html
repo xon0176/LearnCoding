@@ -1,0 +1,251 @@
+<!DOCTYPE html> <!-- Declares this is an HTML5 document -->
+<html lang="en"> <!-- Root element, language set to English -->
+<head>
+  <meta charset="UTF-8"> <!-- Ensures special characters display correctly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes page responsive on mobiles -->
+  <title>HTML Notes</title> <!-- Title shown in browser tab -->
+</head>
+<body> <!-- All visible content goes inside body -->
+
+  <!-- ======================= -->
+  <!-- INTRO -->
+  <!-- ======================= -->
+  <h1>📘 HTML Notes</h1>
+  <hr><br>
+
+  <h2>Languages</h2>
+  <ul>
+    <!-- List of web core languages -->
+    <li>HTML → Structure/layout of webpage</li>
+    <li>CSS → Styling and design</li>
+    <li>JS → Behavior and interactivity</li>
+  </ul>
+  <br><hr><br>
+
+  <h2>Boilerplate</h2>
+  <!-- Basic skeleton of an HTML document -->
+  <pre>
+  &lt;!DOCTYPE html&gt;
+  &lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+
+  &lt;/body&gt;
+  &lt;/html&gt;
+  </pre>
+  <p><b>Note:</b> HTML is not case sensitive (e.g., &lt;P&gt; = &lt;p&gt;).</p>
+  <br><hr><br>
+
+  <!-- ======================= -->
+  <!-- LEVEL 1 -->
+  <!-- ======================= -->
+  <h1>Level 1: Text & Structure</h1>
+  <hr><br>
+
+  <h2>Headings</h2>
+  <!-- Headings go from biggest (h1) to smallest (h6) -->
+  <h1>Heading H1</h1>
+  <h2>Heading H2</h2>
+  <h3>Heading H3</h3>
+  <h4>Heading H4</h4>
+  <h5>Heading H5</h5>
+  <h6>Heading H6</h6>
+  <br>
+
+  <h2>Paragraph & Line Break</h2>
+  <p>This is a paragraph.</p>
+  <!-- <br> adds a single line break -->
+  <p>This is line one.<br>This is line two.</p>
+  <br>
+
+  <h2>Horizontal Rule</h2>
+  <!-- <hr> draws a horizontal line -->
+  <p>Above line</p><hr><p>Below line</p>
+  <br>
+
+  <h2>Formatting Tags</h2>
+  <!-- Common inline text formatting -->
+  <b>Bold</b><br> <!-- Bold text -->
+  <i>Italic</i><br> <!-- Italics -->
+  <u>Underline</u><br> <!-- Underlined text -->
+  <strong>Strong (important)</strong><br> <!-- Strong importance -->
+  <small>Small text</small><br> <!-- Smaller font -->
+  <big>Big text</big><br> <!-- Larger font -->
+  H<sub>2</sub>O (subscript)<br> <!-- Subscript -->
+  a<sup>n</sup> (superscript)<br><br> <!-- Superscript -->
+
+  <h2>Container Tags</h2>
+  <!-- <div> is block-level container, <span> is inline -->
+  <div>Division block (div)</div><br>
+  <span>Inline span</span><br>
+  <!-- Preformatted text preserves spaces and line breaks -->
+  <pre>Preformatted text (keeps spaces &amp; line breaks)</pre><br>
+  <!-- <code> is used for code snippets -->
+  <code>Code snippet example</code><br>
+  <br><hr><br>
+
+  <!-- ======================= -->
+  <!-- LEVEL 2 -->
+  <!-- ======================= -->
+  <h1>Level 2: Lists, Links, Media</h1>
+  <hr><br>
+
+  <h2>Lists</h2>
+  <!-- Unordered list (bullets) -->
+  <ul>
+    <li>Unordered item 1</li>
+    <li>Unordered item 2</li>
+  </ul>
+  <!-- Ordered list (numbers) -->
+  <ol>
+    <li>Ordered item 1</li>
+    <li>Ordered item 2</li>
+  </ol>
+  <br>
+
+  <h2>Links</h2>
+  <!-- <a> creates a hyperlink -->
+  <a href="https://www.google.com">Google</a><br>
+  <!-- target="_blank" opens in a new tab -->
+  <a href="https://www.wikipedia.org" target="_blank">Wikipedia (new tab)</a><br><br>
+
+  <h2>Image</h2>
+  <!-- <img> is self-closing, needs src and alt -->
+  <img src="/image.png" alt="Xon image" height="100"><br><br>
+
+  <h2>Audio</h2>
+  <!-- <audio> plays sound files -->
+  <audio controls>
+    <source src="/audio.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+  </audio><br><br>
+
+  <h2>Video</h2>
+  <!-- <video> embeds video, with controls for play/pause -->
+  <video controls width="250">
+    <source src="/video.mp4" loop="true" type="video/mp4">
+    Your browser does not support video.
+  </video><br><br>
+
+  <h2>Iframe</h2>
+  <!-- <iframe> embeds another webpage -->
+  <iframe src="https://www.example.com" width="300" height="200"></iframe><br><br>
+  <br><hr><br>
+
+  <!-- ======================= -->
+  <!-- LEVEL 3 -->
+  <!-- ======================= -->
+  <h1>Level 3: Tables & Special Characters</h1>
+  <hr><br>
+
+  <h2>Tables</h2>
+  <!-- <table> structures data into rows and columns -->
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Name</th> <!-- Table header cell -->
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Alice</td> <!-- Table data cell -->
+        <td>20</td>
+      </tr>
+      <tr>
+        <td>Bob</td>
+        <td>22</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <!-- <tfoot> is footer of table -->
+      <tr>
+        <td colspan="2">End of Table</td>
+      </tr>
+    </tfoot>
+  </table><br>
+
+  <h2>Special Characters</h2>
+  <!-- HTML entities used for reserved symbols -->
+  <p>&copy; &reg; &trade; &lt; &gt; &amp; &dollar;</p><br>
+  <br><hr><br>
+
+  <!-- ======================= -->
+  <!-- LEVEL 4 -->
+  <!-- ======================= -->
+  <h1>Level 4: Semantic & Layout</h1>
+  <hr><br>
+
+  <h2>Semantic Tags</h2>
+  <!-- Semantic elements describe meaning -->
+  <header>Header section</header><br>
+  <nav>Navigation section</nav><br>
+  <main>Main content</main><br>
+  <section>Section of content</section><br>
+  <article>Article block</article><br>
+  <aside>Sidebar</aside><br>
+  <footer>Footer section</footer><br><br>
+
+  <h2>Block vs Inline</h2>
+  <!-- Block elements take full width, inline only needed width -->
+  <div>Div (block)</div>
+  <span>Span (inline)</span><br><br>
+  <br><hr><br>
+
+  <!-- ======================= -->
+  <!-- LEVEL 5 -->
+  <!-- ======================= -->
+  <h1>Level 5: Forms</h1>
+  <hr><br>
+
+  <h2>Form Example</h2>
+  <!-- Forms collect user input -->
+  <form action="">
+    <!-- Text input -->
+    <label for="username">Username:</label>
+    <input type="text" id="username"><br><br>
+
+    <!-- Password input -->
+    <label for="password">Password:</label>
+    <input type="password" id="password"><br><br>
+
+    <!-- Checkbox -->
+    <label>
+      <input type="checkbox" name="subscribe"> Subscribe to newsletter
+    </label><br><br>
+
+    <!-- Radio buttons (same name = one choice only) -->
+    <label>
+      <input type="radio" name="gender"> Male
+    </label>
+    <label>
+      <input type="radio" name="gender"> Female
+    </label><br><br>
+
+    <!-- Multiline text area -->
+    <textarea placeholder="Write here..."></textarea><br><br>
+
+    <!-- Dropdown select -->
+    <label for="options">Choose option:</label>
+    <select id="options">
+      <option>Option 1</option>
+      <option>Option 2</option>
+    </select><br><br>
+
+    <!-- Submit button -->
+    <input type="submit" value="Submit">
+  </form><br>
+  <br><hr><br>
+
+  <!-- ======================= -->
+  <!-- END -->
+  <!-- ======================= -->
+  <h1>✅ END</h1>
+
+</body>
+</html>
+<!-- End of HTML document -->

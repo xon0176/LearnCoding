@@ -1,0 +1,154 @@
+<!DOCTYPE html> <!-- tells browser you are using HTML5 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- supports different characters -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsive design -->
+  <title>CSS Notes</title> <!-- page title shown in browser tab -->
+</head> <!-- end of metadata -->
+
+<body> <!-- contains all visible data -->
+
+  <!-- Intro: Basic web languages -->
+  <h2>Languages</h2>
+  <ul>
+    <li>HTML - Structure/layout</li>
+    <li>CSS - Styling</li>
+    <li>JS - Behavior/logic</li>
+  </ul>
+
+  <!-- Level 1: CSS Basics -->
+  <h2>Level 1</h2>
+  <h3>CSS - Cascading Style Sheets</h3>
+  <ul>
+    <li>CSS is the code that is used to style a web page and its content.</li>
+    <li>The component used to design the layout and appearance of websites are called CSS rules.</li>
+    <li>For default website's stylesheet use <b>style.css</b></li>
+  </ul>
+
+  <!-- CSS Syntax explanation -->
+  <h3>Basic Syntax</h3>
+  <ul>
+    <li>Selectors - HTML elements to style (e.g., &lt;h1&gt;)</li>
+    <li>Properties - Aspects to change (e.g., color, font-size)</li>
+    <li>Values - Settings for properties (e.g., red, 16px)</li>
+  </ul>
+
+  <!-- Ways to include CSS -->
+  <h3>Including CSS</h3>
+  <ul>
+    <li>Inline CSS</li>
+    &lt;h1 style="color: red;"&gt;Red Heading&lt;/h1&gt;<br><br>
+
+    <li>Internal CSS</li>
+    &lt;style&gt;<br>
+      &nbsp;&nbsp;h1 {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;color: red;<br>
+      &nbsp;&nbsp;}<br>
+    &lt;/style&gt;<br><br>
+
+    <li>External CSS</li>
+    &lt;link rel="stylesheet" href="style.css"&gt;
+  </ul>
+
+  <!-- CSS Colors -->
+  <h3>Color</h3>
+  <ul>
+    <li>Color property</li>
+    <pre>color: red;</pre>
+    <pre>color: blue;</pre>
+    <pre>color: green;</pre>
+    <pre>color: yellow;</pre><br>
+
+    <li>Background-color property</li>
+    <pre>background-color: red;</pre>
+    <pre>background-color: blue;</pre>
+    <pre>background-color: green;</pre>
+    <pre>background-color: yellow;</pre><br>
+
+    <li>Color System</li>
+    <ol>
+      <li>Named colors</li>
+      <pre>red</pre>
+      <pre>blue</pre>
+      <pre>green</pre>
+      <pre>yellow</pre><br>
+
+      <li>RGB</li>
+      <pre>color: rgb(255, 0, 0);</pre>
+      <pre>color: rgb(0, 255, 0);</pre>
+      <pre>color: rgb(0, 0, 255);</pre>
+      <pre>color: rgb(255, 255, 0);</pre><br>
+
+      <li>Hexadecimal</li>
+      <pre>color: #FF0000;</pre>
+      <pre>color: #00FF00;</pre>
+      <pre>color: #0000FF;</pre>
+      <pre>color: #FFFF00;</pre>
+    </ol>
+  </ul>
+
+  <!-- Selectors in CSS -->
+  <h3>Selectors</h3>
+  <ul>
+    <li>Universal Selector</li>
+    <pre>* { }</pre><br>
+
+    <li>Type Selector</li>
+    <pre>h1 { }</pre><br>
+
+    <li>Class Selector</li>
+    <pre>.myClass { }</pre><br>
+
+    <li>ID Selector</li>
+    <pre>#myId { }</pre>
+  </ul>
+
+  <!-- Text Styling Properties -->
+  <h3>Text Properties</h3>
+  <ul>
+    <li>Font Family</li>
+    <pre>font-family: Arial, sans-serif / Arial, roboto;</pre><br>
+
+    <li>Font Size</li>
+    <pre>font-size: 16px / 18px / 20px;</pre><br>
+
+    <li>Line Height</li>
+    <pre>line-height: 5 / 10px / normal;</pre><br>
+
+    <li>Font Weight</li>
+    <pre>font-weight: bold / normal / lighter;</pre>
+    <pre>font-weight: 100-900;</pre><br>
+
+    <li>Text Align</li>
+    <pre>text-align: left / center / right;</pre><br>
+
+    <li>Text Decoration</li>
+    <pre>text-decoration: underline / overline / line-through;</pre><br>
+
+    <li>Text Transform</li>
+    <pre>text-transform: uppercase / lowercase / none;</pre><br>
+
+  <!-- Level 2: Advanced CSS -->
+  <h2>Level 2</h2>
+
+  <!-- CSS Box Model -->
+  <h3>Box Model</h3>
+  <ul>
+    <li>Content - The actual content of the box (text, images, etc.)</li>
+    <li>Padding - Space between the content and the border</li>
+    <li>Border - The border surrounding the padding</li>
+    <li>Margin - Space outside the border</li>
+  </ul>
+
+  <!-- CSS Positioning -->
+  <h3>Positioning</h3>
+  <ul>
+    <li>Static - Default positioning (flow of the document)</li>
+    <li>Relative - Positioned relative to its normal position</li>
+    <li>Absolute - Positioned relative to the nearest positioned ancestor</li>
+    <li>Fixed - Positioned relative to the viewport (browser window)</li>
+    <li>Sticky - Switches between relative and fixed, depending on scroll position</li>
+  </ul>
+
+</body>
+</html>
