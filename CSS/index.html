@@ -1,154 +1,347 @@
-<!DOCTYPE html> <!-- tells browser you are using HTML5 -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"> <!-- supports different characters -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsive design -->
-  <title>CSS Notes</title> <!-- page title shown in browser tab -->
-</head> <!-- end of metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Notes</title>
+</head>
 
-<body> <!-- contains all visible data -->
+<body>
 
-  <!-- Intro: Basic web languages -->
-  <h2>Languages</h2>
-  <ul>
-    <li>HTML - Structure/layout</li>
-    <li>CSS - Styling</li>
-    <li>JS - Behavior/logic</li>
-  </ul>
+<!-- Wrapper table used to center content like a PDF column -->
+<center>
+  <table>
+    <tr>
+      <td align="left">
 
-  <!-- Level 1: CSS Basics -->
-  <h2>Level 1</h2>
-  <h3>CSS - Cascading Style Sheets</h3>
-  <ul>
-    <li>CSS is the code that is used to style a web page and its content.</li>
-    <li>The component used to design the layout and appearance of websites are called CSS rules.</li>
-    <li>For default website's stylesheet use <b>style.css</b></li>
-  </ul>
+        <!-- ========================= -->
+        <!-- INTRODUCTION -->
+        <!-- ========================= -->
+        <h2>Languages</h2>
+        <ul>
+          <!-- Quick overview of the 3 core web languages -->
+          <li><code>HTML</code> → Structure/layout</li>
+          <li><code>CSS</code> → Styling</li>
+          <li><code>JS</code> → Behavior/logic</li>
+        </ul>
+        <br><hr><br>
 
-  <!-- CSS Syntax explanation -->
-  <h3>Basic Syntax</h3>
-  <ul>
-    <li>Selectors - HTML elements to style (e.g., &lt;h1&gt;)</li>
-    <li>Properties - Aspects to change (e.g., color, font-size)</li>
-    <li>Values - Settings for properties (e.g., red, 16px)</li>
-  </ul>
+        <!-- ========================= -->
+        <!-- LEVEL 1: Selectors, Colors, Text -->
+        <!-- ========================= -->
+        <h2>Level 1</h2>
 
-  <!-- Ways to include CSS -->
-  <h3>Including CSS</h3>
-  <ul>
-    <li>Inline CSS</li>
-    &lt;h1 style="color: red;"&gt;Red Heading&lt;/h1&gt;<br><br>
+        <h3>CSS - Cascading Style Sheets</h3>
+        <ul>
+          <li>CSS styles the look & feel of webpages.</li>
+          <li>Rule structure → <code>selector { property: value; }</code></li>
+          <li>Default stylesheet filename → <b><code>style.css</code></b></li>
+        </ul>
+        <br>
 
-    <li>Internal CSS</li>
-    &lt;style&gt;<br>
-      &nbsp;&nbsp;h1 {<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;color: red;<br>
-      &nbsp;&nbsp;}<br>
-    &lt;/style&gt;<br><br>
+        <h3>Basic Syntax</h3>
+        <ul>
+          <!-- Explains the 3 parts of a CSS rule -->
+          <li><b>Selector</b> → chooses element(s) (e.g., <code>h1</code>)</li>
+          <li><b>Property</b> → aspect to change (e.g., <code>color</code>)</li>
+          <li><b>Value</b> → setting for property (e.g., <code>red</code>)</li>
+        </ul>
+        <br>
 
-    <li>External CSS</li>
-    &lt;link rel="stylesheet" href="style.css"&gt;
-  </ul>
+        <h3>Including CSS</h3>
+        <ul>
+          <li>Inline CSS</li>
+          <!-- CSS written directly inside the HTML tag -->
+          <pre>&lt;h1 style="color:red;"&gt;Red Heading&lt;/h1&gt;</pre><br>
 
-  <!-- CSS Colors -->
-  <h3>Color</h3>
-  <ul>
-    <li>Color property</li>
-    <pre>color: red;</pre>
-    <pre>color: blue;</pre>
-    <pre>color: green;</pre>
-    <pre>color: yellow;</pre><br>
+          <li>Internal CSS</li>
+          <!-- CSS inside a <style> block within the same HTML file -->
+          <pre>
+&lt;style&gt;
+  h1 { color: red; }
+&lt;/style&gt;
+          </pre><br>
 
-    <li>Background-color property</li>
-    <pre>background-color: red;</pre>
-    <pre>background-color: blue;</pre>
-    <pre>background-color: green;</pre>
-    <pre>background-color: yellow;</pre><br>
+          <li>External CSS</li>
+          <!-- CSS kept in a separate .css file and linked -->
+          <pre>&lt;link rel="stylesheet" href="style.css"&gt;</pre>
+        </ul>
+        <br><hr><br>
 
-    <li>Color System</li>
-    <ol>
-      <li>Named colors</li>
-      <pre>red</pre>
-      <pre>blue</pre>
-      <pre>green</pre>
-      <pre>yellow</pre><br>
+        <h3>Selectors</h3>
+        <ul>
+          <li>Universal Selector</li>
+          <!-- * applies to ALL elements -->
+          <pre>* { margin:0; padding:0; }</pre><br>
 
-      <li>RGB</li>
-      <pre>color: rgb(255, 0, 0);</pre>
-      <pre>color: rgb(0, 255, 0);</pre>
-      <pre>color: rgb(0, 0, 255);</pre>
-      <pre>color: rgb(255, 255, 0);</pre><br>
+          <li>Type Selector</li>
+          <!-- Selects element by tag name -->
+          <pre>h1 { color:blue; }</pre><br>
 
-      <li>Hexadecimal</li>
-      <pre>color: #FF0000;</pre>
-      <pre>color: #00FF00;</pre>
-      <pre>color: #0000FF;</pre>
-      <pre>color: #FFFF00;</pre>
-    </ol>
-  </ul>
+          <li>Class Selector</li>
+          <!-- Starts with . and can be reused on multiple elements -->
+          <pre>.myClass { font-size:20px; }</pre><br>
 
-  <!-- Selectors in CSS -->
-  <h3>Selectors</h3>
-  <ul>
-    <li>Universal Selector</li>
-    <pre>* { }</pre><br>
+          <li>ID Selector</li>
+          <!-- Starts with # and must be unique per page -->
+          <pre>#myId { background:yellow; }</pre>
+        </ul>
+        <br><hr><br>
 
-    <li>Type Selector</li>
-    <pre>h1 { }</pre><br>
+        <h3>Color</h3>
+        <ul>
+          <li>Text color</li>
+          <pre>color: red;</pre>
+          <pre>color: blue;</pre><br>
 
-    <li>Class Selector</li>
-    <pre>.myClass { }</pre><br>
+          <li>Background color</li>
+          <pre>background-color: green;</pre>
+          <pre>background-color: yellow;</pre><br>
 
-    <li>ID Selector</li>
-    <pre>#myId { }</pre>
-  </ul>
+          <li>Color Systems</li>
+          <ol>
+            <li>Named colors → <code>red</code>, <code>blue</code>, <code>green</code>, <code>yellow</code></li><br>
+            <li>RGB</li>
+            <!-- RGB = red, green, blue with values 0-255 -->
+            <pre>color: rgb(255,0,0);</pre>
+            <pre>color: rgb(0,255,0);</pre><br>
+            <li>Hexadecimal</li>
+            <!-- Hex values with #RRGGBB format -->
+            <pre>color: #FF0000;</pre>
+            <pre>color: #00FF00;</pre>
+          </ol>
+        </ul>
+        <br><hr><br>
 
-  <!-- Text Styling Properties -->
-  <h3>Text Properties</h3>
-  <ul>
-    <li>Font Family</li>
-    <pre>font-family: Arial, sans-serif / Arial, roboto;</pre><br>
+        <h3>Text Properties</h3>
+        <ul>
+          <li>Font family</li>
+          <!-- Primary font + fallback options -->
+          <pre>font-family: Arial, sans-serif;</pre><br>
 
-    <li>Font Size</li>
-    <pre>font-size: 16px / 18px / 20px;</pre><br>
+          <li>Font size</li>
+          <!-- px = absolute, em = relative to parent -->
+          <pre>font-size: 16px;</pre>
+          <pre>font-size: 1.5em;</pre><br>
 
-    <li>Line Height</li>
-    <pre>line-height: 5 / 10px / normal;</pre><br>
+          <li>Line height</li>
+          <!-- Controls spacing between lines -->
+          <pre>line-height: normal;</pre>
+          <pre>line-height: 20px;</pre><br>
 
-    <li>Font Weight</li>
-    <pre>font-weight: bold / normal / lighter;</pre>
-    <pre>font-weight: 100-900;</pre><br>
+          <li>Font weight</li>
+          <!-- Boldness (100–900 scale) -->
+          <pre>font-weight: bold;</pre>
+          <pre>font-weight: 400;</pre>
+          <pre>font-weight: 100-900;</pre><br>
 
-    <li>Text Align</li>
-    <pre>text-align: left / center / right;</pre><br>
+          <li>Text align</li>
+          <!-- Horizontal alignment -->
+          <pre>text-align: left;</pre>
+          <pre>text-align: center;</pre><br>
 
-    <li>Text Decoration</li>
-    <pre>text-decoration: underline / overline / line-through;</pre><br>
+          <li>Text decoration</li>
+          <!-- Adds line effects -->
+          <pre>text-decoration: underline;</pre>
+          <pre>text-decoration: line-through;</pre><br>
 
-    <li>Text Transform</li>
-    <pre>text-transform: uppercase / lowercase / none;</pre><br>
+          <li>Text transform</li>
+          <!-- Changes letter casing -->
+          <pre>text-transform: uppercase;</pre>
+          <pre>text-transform: lowercase;</pre>
+          <pre>text-transform: capitalize;</pre>
+        </ul>
+        <br><hr><br>
 
-  <!-- Level 2: Advanced CSS -->
-  <h2>Level 2</h2>
+        <!-- ========================= -->
+        <!-- LEVEL 2 Box Model, Display, Alpha Channel -->
+        <!-- ========================= -->
+        <h2>Level 2</h2>
 
-  <!-- CSS Box Model -->
-  <h3>Box Model</h3>
-  <ul>
-    <li>Content - The actual content of the box (text, images, etc.)</li>
-    <li>Padding - Space between the content and the border</li>
-    <li>Border - The border surrounding the padding</li>
-    <li>Margin - Space outside the border</li>
-  </ul>
+        <h3>Box Model</h3>
+        <ul>
+          <!-- Box model = content + padding + border + margin -->
+          <li>Height & Width</li>
+          <pre>height: 100px;</pre>
+          <pre>width: 200px;</pre><br>
 
-  <!-- CSS Positioning -->
-  <h3>Positioning</h3>
-  <ul>
-    <li>Static - Default positioning (flow of the document)</li>
-    <li>Relative - Positioned relative to its normal position</li>
-    <li>Absolute - Positioned relative to the nearest positioned ancestor</li>
-    <li>Fixed - Positioned relative to the viewport (browser window)</li>
-    <li>Sticky - Switches between relative and fixed, depending on scroll position</li>
-  </ul>
+          <li>Padding</li>
+          <!-- Space inside border -->
+          <pre>padding: 10px;</pre>
+          <pre>padding: 5px 10px;</pre>
+          <pre>padding: 5px 10px 15px;</pre><br>
+
+          <li>Border</li>
+          <!-- Line around element -->
+          <pre>border: 1px solid black;</pre>
+          <pre>border-radius: 10px;</pre>
+          <pre>border-radius: 50%;</pre><br>
+
+          <li>Margin</li>
+          <!-- Space outside border -->
+          <pre>margin: 10px;</pre>
+          <pre>margin: 5px 10px;</pre>
+        </ul>
+        <br><hr><br>
+
+        <h3>Display Property</h3>
+        <ul>
+          <!-- Controls how element is displayed -->
+          <li>Inline</li>
+          <pre>display: inline;</pre><br>
+
+          <li>Block</li>
+          <pre>display: block;</pre><br>
+
+          <li>Inline-block</li>
+          <pre>display: inline-block;</pre><br>
+
+          <li>None</li>
+          <pre>display: none;</pre><br>
+
+          <li>Visibility</li>
+          <pre>visibility: hidden;</pre>
+          <pre>visibility: visible;</pre>
+        </ul>
+        <br><hr><br>
+
+        <h3>Alpha Channel</h3>
+        <!-- Opacity control via rgba() -->
+        <p>Controls opacity (<code>0</code> = transparent, <code>1</code> = solid)</p>
+        <ul>
+          <li>RGBA example</li>
+          <pre>color: rgba(255,0,0,0.5);</pre>
+          <pre>background-color: rgba(0,255,0,0.5);</pre>
+        </ul>
+        <br><hr><br>
+
+        <!-- ========================= -->
+        <!-- LEVEL 3 Units, Positioning, Background Image -->
+        <!-- ========================= -->
+        <h2>Level 3</h2>
+
+        <h3>Units in CSS</h3>
+        <ul>
+          <li>Absolute units → <code>px</code>, <code>in</code>, <code>cm</code></li>
+          <li>Relative units → <code>em</code>, <code>rem</code>, <code>%</code></li>
+          <li>Viewport units → <code>vw</code>, <code>vh</code></li>
+        </ul>
+        <br><hr><br>
+
+        <h3>Positioning</h3>
+        <ul>
+          <!-- Different positioning modes -->
+          <li>Static</li>
+          <pre>position: static;</pre><br>
+          <li>Relative</li>
+          <pre>position: relative; top: 10px; left: 20px;</pre><br>
+          <li>Absolute</li>
+          <pre>position: absolute; top: 0; left: 0;</pre><br>
+          <li>Fixed</li>
+          <pre>position: fixed; bottom: 0; right: 0;</pre><br>
+          <li>Sticky</li>
+          <pre>position: sticky; top: 0;</pre>
+        </ul>
+        <br><hr><br>
+
+        <h3>Background Image</h3>
+        <ul>
+          <li>Set → <code>background-image: url('image.jpg');</code></li>
+          <li>Size → <code>cover</code>, <code>contain</code>, <code>auto</code></li>
+          <li>Position → <code>center</code>, <code>top right</code></li>
+        </ul>
+        <br><hr><br>
+
+        <!-- ========================= -->
+        <!-- LEVEL 4 Flexbox, Media Queries -->
+        <!-- ========================= -->
+        <h2>Level 4</h2>
+
+        <h3>Flexbox</h3>
+        <!-- Flexbox layouts -->
+        <code>display: flex;</code>
+        <ul>
+          <li><code>flex-direction</code></li>
+            <code>flex-direction: row;</code>
+            <code>flex-direction: column;</code>
+          <li><code>flex-wrap</code></li>
+            <code>flex-wrap: nowrap;</code>
+            <code>flex-wrap: wrap;</code>
+          <li><code>justify-content</code></li>
+            <code>justify-content: flex-start;</code>
+            <code>justify-content: center;</code>
+            <code>justify-content: space-between;</code>
+            <code>justify-content: space-around;</code>
+          <li><code>align-items</code></li>
+            <code>align-items: stretch;</code>
+            <code>align-items: center;</code>
+            <code>align-items: start;</code>
+            <code>align-items: end;</code>
+          <li><code>flex-grow</code></li>
+            <code>flex-grow: 1;</code>
+          <li><code>flex-shrink</code></li>
+            <code>flex-shrink: 1;</code>
+          <li><code>flex-basis</code></li>
+            <code>flex-basis: 100px;</code>
+        </ul>
+        <br><hr><br>
+
+        <h3>Media Queries</h3>
+        <!-- Responsive breakpoints -->
+        <ul>
+          <li><code>@media (max-width: 600px)</code></li>
+          <li><code>@media (min-width: 601px) and (max-width: 900px)</code></li>
+          <li><code>@media (min-width: 901px)</code></li>
+        </ul>
+        <br><hr><br>
+
+        <!-- ========================= -->
+        <!-- LEVEL 5 Transitions, Transform, Animations -->
+        <!-- ========================= -->
+        <h2>Level 5</h2>
+
+        <h3>Transitions</h3>
+        <!-- For smooth property changes on hover/focus -->
+        <ul>
+          <li><code>transition-property</code></li>
+          <li><code>transition-duration</code></li>
+          <li><code>transition-timing-function</code></li>
+          <li><code>transition-delay</code></li>
+          <li>Shorthand → <code>transition: background-color 0.5s ease-in-out 0s;</code></li>
+        </ul>
+        <br><hr><br>
+
+        <h3>CSS Transform</h3>
+        <!-- Used to move, rotate, scale, skew elements -->
+        <ul>
+          <li><code>transform: translate(10px,20px);</code></li>
+          <li><code>transform: rotate(45deg);</code></li>
+          <li><code>transform: scale(1.5);</code></li>
+          <li><code>transform: skewX(10deg);</code></li>
+        </ul>
+        <br><hr><br>
+
+        <h3>Animations</h3>
+        <ul>
+          <li>@keyframes example</li>
+          <!-- Defines the animation frames -->
+          <pre>@keyframes myName {
+  from { font-size:20px; }
+  to { font-size:40px; }
+}</pre><br>
+          <li>Shorthand → <code>animation: myName 3s ease-in 1s infinite alternate;</code></li>
+          <!-- animation: name duration timing delay iteration direction -->
+        </ul>
+        <br><hr><br>
+
+        <h2>Thank You!</h2>
+
+        <center>Made with ❤️ by XON</center>
+
+      </td>
+    </tr>
+  </table>
+</center>
 
 </body>
 </html>
