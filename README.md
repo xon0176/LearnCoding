@@ -5,6 +5,15 @@ This repository serves as my structured notebook — covering everything from we
 
 ---
 
+
+## 🔗 Notes Link
+- **Main index.html** → [https://xon0176.github.io/LearnCoding/](https://xon0176.github.io/LearnCoding/)  
+- **HTML file index.html** → [https://xon0176.github.io/LearnCoding/HTML/index.html](https://xon0176.github.io/LearnCoding/HTML/index.html)  
+- **CSS file index.html** → [https://xon0176.github.io/LearnCoding/CSS/index.html](https://xon0176.github.io/LearnCoding/CSS/index.html)  
+- **CSS file demo.html** → [https://xon0176.github.io/LearnCoding/CSS/demo.html](https://xon0176.github.io/LearnCoding/CSS/demo.html)  
+
+---
+
 ## 📂 Repository Contents
 - **Notes** → Organized explanations of concepts (HTML, CSS, JavaScript, etc.)
 - **Examples** → Small code snippets and demos
