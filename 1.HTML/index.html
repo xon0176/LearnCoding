@@ -1,0 +1,383 @@
+<!DOCTYPE html> <!-- Declares this is an HTML5 document -->
+<html lang="en"> <!-- Root element, language set to English -->
+<head>
+  <meta charset="UTF-8"> <!-- Ensures special characters display correctly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes page responsive on mobiles -->
+  <title>HTML Notes</title> <!-- Title shown in browser tab -->
+</head>
+<body> <!-- All visible content goes inside body -->
+
+  <center>
+  <table>
+    <tr>
+      <td align="left">
+<hr>   
+  <!-- ======================= -->
+  <!-- INTRO -->
+  <!-- ======================= -->
+  <h1 id="intro">📘 HTML Notes</h1>
+<hr>   
+
+  <!-- ======================= -->
+  <!-- QUICK NAVIGATION -->
+  <!-- ======================= -->
+  <nav>
+    <h2>Quick Navigation</h2>
+    <ul>
+      <li><a href="#intro">Intro</a></li>
+      <li><a href="#level1">Level 1</a></li>
+      <li><a href="#level2">Level 2</a></li>
+      <li><a href="#level3">Level 3</a></li>
+      <li><a href="#level4">Level 4</a></li>
+    </ul>
+  </nav>
+<hr>
+
+  <h2>Languages</h2>
+  <ul>
+    <!-- List of web core languages -->
+    <li>HTML → Structure/layout of webpage</li>
+    <li>CSS → Styling and design</li>
+    <li>JS → Behavior and interactivity</li>
+  </ul>
+<hr>
+
+  <!-- ======================= -->
+  <!-- LEVEL 1 -->
+  <!-- ======================= -->
+  <h1 id="level1">Level 1: HTML Basics</h1>
+<hr>
+
+  <h2>HTML </h2>
+  <ul>
+    <li>HyperText Markup Language</li>
+    <li>HTML is the code that is used to structure a webpage and its content.</li>
+    <li>The component used to design the structure of a webpage is called <strong>HTML Tags</strong>.</li>
+    <li>HTML tag is parent of head & body tags.</li>
+    <li>Most HTML tags have an opening tag and a closing tag in between.</li>
+    <li>Some tags have content in between, eg- <code>&lt;br&gt;</code>.</li>
+    <li>We can use inspect element/view source to see/edit the HTML of any webpage.</li>
+  </ul>
+<hr>
+
+  <h2>HTML is NOT case sensitive</h2>
+  <ul>
+    <li>&lt;html&gt; = &lt;HTML&gt;</li>
+    <li>&lt;p&gt; = &lt;P&gt;</li>
+    <li>&lt;head&gt; = &lt;HEAD&gt;</li>
+    <li>&lt;body&gt; = &lt;BODY&gt;</li>
+  </ul>
+<hr>
+
+  <h2>Comments in HTML</h2>
+  <p>Comments are not displayed in the browser but are useful for developers.</p>
+  <p>This is part of code that should not be parsed.</p>
+  <pre>
+  &lt;!-- This is a comment --&gt;
+  </pre>
+<hr>
+
+  <h2 id="boilerplate">Boilerplate</h2>
+  <!-- Basic skeleton of an HTML document -->
+  <pre>
+  &lt;!DOCTYPE html&gt;
+  &lt;html lang="en"&gt;
+    &lt;head&gt;
+      &lt;meta charset="UTF-8"&gt;
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+      &lt;title&gt;Document&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;!-- Content goes here --&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;
+  </pre>
+<hr>
+
+  <!-- ======================= -->
+  <!-- LEVEL 2 -->
+  <!-- ======================= -->
+  <h1 id="level2">Level 2: Text & Structure</h1>
+<hr>
+
+  <h2>Headings in HTML</h2>
+  <!-- Headings go from biggest (h1) to smallest (h6) -->
+  <h1>Heading H1</h1>
+  <h2>Heading H2</h2>
+  <h3>Heading H3</h3>
+  <h4>Heading H4</h4>
+  <h5>Heading H5</h5>
+  <h6>Heading H6</h6>
+<hr>
+
+  <h2>Paragraph</h2>
+  <!-- <p> defines a paragraph -->
+  <p>This is a paragraph.</p>
+  <p><code><strong>Lorem</strong> ipsum dolor sit amet</code></p>
+<hr>
+
+  <h3>Anchor Tag</h3>
+  <!-- <a> creates a hyperlink -->
+  <a href="/HTML/index.html">GO to HTML Notes</a>
+  <br>
+  <a href="https://www.google.com">Google</a>
+  <br>
+  <a href="https://www.wikipedia.org" target="_main">Wikipedia (new tab)</a>
+  <br>
+  <a href="https://www.youtube.com" target="_main"> <img src="https://yt3.googleusercontent.com/LZeUOuOM8lzINkYAKi1X3pCQz1xsSD_EndPUR1vOGesaGavUtyM_-bCUq7Gld-LPX_R7uieWsA=s900-c-k-c0x00ffffff-no-rj" alt="Youtube" height="100">Youtube</a>
+<hr>
+
+  <h3>Image Tag</h3>
+  <!-- <img> embeds an image -->
+  <img src="/image.png" alt="XON image" width="200" height="110">
+  <img src="https://i.pinimg.com/280x280_RS/21/fd/1b/21fd1b18095a41b8d3d7f9db5dbdcfef.jpg" alt="XON image" width="20%">
+<hr>
+
+  <h3>Audio</h3>
+  <!-- <audio> plays sound files -->
+  <audio controls>
+    <source src="/audio.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+  </audio><br><br>
+<hr>
+
+  <h3>Video</h3>
+  <!-- <video> embeds video, with controls for play/pause -->
+  <video controls width="250">
+    <source src="/video.mp4" loop="true" type="video/mp4">
+    Your browser does not support video.
+  </video>
+<hr>
+
+  <h3>Iframe</h3>
+  <!-- <iframe> embeds another webpage -->
+  <iframe src="https://www.example.com" width="300" height="200"></iframe>
+<hr>
+
+  <h3>Line Break</h3>
+  <!-- <br> adds a single line break -->
+  <p>This is line one.<br>This is line two.</p>
+<hr>
+
+  <h3>Horizontal Rule</h3>
+  <!-- <hr> draws a horizontal line -->
+  <p>Above line</p><hr><p>Below line</p>
+<hr>
+
+  <h3>Formatting Tags</h3>
+  <!-- Common inline text formatting -->
+  <b>Bold</b><br> <!-- Bold text -->
+  <i>Italic</i><br> <!-- Italics -->
+  <u>Underline</u><br> <!-- Underlined text -->
+  <strong>Strong (important)</strong><br> <!-- Strong importance -->
+  <small>Small text</small><br> <!-- Smaller font -->
+  <big>Big text</big><br> <!-- Larger font -->
+  H<sub>2</sub>O (subscript)<br> <!-- Subscript -->
+  a<sup>n</sup> (superscript)<br><br> <!-- Superscript -->
+<hr>
+
+    <h3>Page Layout Techniques</h3>
+    <!-- Using <div> for sections -->
+    <p>using Semantic tags for layout</p>
+    <code><header>Header section</header></code><br>
+    <code><nav>Navigation section</nav></code><br>
+    <code><main>Main content area</main></code><br>
+    <code><section>Section of content</section></code><br>
+    <code><article>Article block</article></code><br>
+    <code><aside>Sidebar content</aside></code><br>
+    <code><footer>Footer section</footer></code><br>
+<hr>
+
+  <h3>Container Tags</h3>
+  <!-- <div> is block-level container, <span> is inline -->
+  <h4>Division block (div)</h4>
+  <ul>
+    <li>Address tag</li>
+    <li>Article tag</li>
+    <li>aside</li>
+    <li>blockquote</li>
+    <li>canvas</li>
+    <li>dd</li>
+    <li>div</li>
+    <li>dl</li>
+    <li>dt</li>
+    <li>fieldset</li>
+    <li>figcaption</li>
+    <li>figure</li>
+    <li>footer</li>
+    <li>form</li>
+    <li>h1-h6</li>
+    <li>header</li>
+    <li>hr</li>
+    <li>li</li>
+    <li>main</li>
+    <li>nav</li>
+    <li>noscript</li>
+    <li>ol</li>
+    <li>p</li>
+    <li>pre</li>
+    <li>section</li>
+    <li>table</li>
+    <li>tfoot</li>
+    <li>thead</li>
+    <li>ul</li>
+    <li>video</li>
+  </ul>
+
+  <h4>Inline span</h4>
+  <ul>
+    <li>a</li>
+    <li>abbr</li>
+    <li>acronym</li>
+    <li>b</li>
+    <li>bdo</li>
+    <li>big</li>
+    <li>br</li>
+    <li>button</li>
+    <li>cite</li>
+    <li>code</li>
+    <li>dfn</li>
+    <li>em</li>
+    <li>i</li>
+    <li>img</li>
+    <li>input</li>
+    <li>kbd</li>
+    <li>label</li>
+    <li>map</li>
+    <li>object</li>
+    <li>output</li>
+    <li>q</li>
+    <li>samp</li>
+    <li>script</li>
+    <li>select</li>
+    <li>small</li>
+    <li>span</li>
+    <li>strong</li>
+    <li>sub</li>
+    <li>sup</li>
+    <li>textarea</li>
+    <li>time</li>
+    <li>tt</li>
+    <li>u</li>
+    <li>var</li>
+  </ul>
+  <!-- <code> is used for code snippets -->
+  <code>Code snippet example</code><br>
+<hr>
+
+  <!-- ======================= -->
+  <!-- LEVEL 3 -->
+  <!-- ======================= -->
+  <h2 id="level3">Level 3: Lists, Tables & Special Characters</h2>
+<hr>
+
+  <h3>Lists</h3>
+  <!-- Unordered list (bullets) -->
+  <ul>
+    <li>Unordered item 1</li>
+    <li>Unordered item 2</li>
+  </ul>
+  <!-- Ordered list (numbers) -->
+  <ol>
+    <li>Ordered item 1</li>
+    <li>Ordered item 2</li>
+  </ol>
+<hr>
+
+  <h3>Tables</h3>
+  <!-- <table> structures data into rows and columns -->
+  <table border="2">
+    <thead>
+      <tr>
+        <th>Name</th> <!-- Table header cell -->
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Alice</td> <!-- Table data cell -->
+        <td>20</td>
+      </tr>
+      <tr>
+        <td>Bob</td>
+        <td>22</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <!-- <tfoot> is footer of table -->
+      <tr>
+        <td colspan="2">End of Table</td>
+      </tr>
+    </tfoot>
+  </table><br>
+
+  <h3>Special Characters</h3>
+  <!-- HTML entities used for reserved symbols -->
+  <ul>
+  <li><code>&copy; - copy</code></li>
+  <li><code>&reg; - registered</code></li>
+  <li><code>&trade; - trademark</code></li>
+  <li><code>&lt; - less than</code></li>
+  <li><code>&gt; - greater than</code></li>
+  <li><code>&amp; - ampersand</code></li>
+  <li><code>&dollar; - dollar</code></li>
+  </ul>
+  <hr>
+
+  <!-- ======================= -->
+  <!-- LEVEL 4 -->
+  <!-- ======================= -->
+  <h2 id="level4">Level 4: Forms</h2>
+<hr>
+
+  <h3>Form Example</h3>
+  <!-- Forms collect user input -->
+  <form action="">
+    <!-- Text input -->
+    <label for="username">Username:</label>
+    <input type="text" id="username"><br><br>
+
+    <!-- Password input -->
+    <label for="password">Password:</label>
+    <input type="password" id="password"><br><br>
+
+    <!-- Checkbox -->
+    <label>
+      <input type="checkbox" name="subscribe"> Subscribe to newsletter
+    </label><br><br>
+
+    <!-- Radio buttons (same name = one choice only) -->
+    <label>
+      <input type="radio" name="gender"> Male
+    </label>
+    <label>
+      <input type="radio" name="gender"> Female
+    </label><br><br>
+
+    <!-- Multiline text area -->
+    <textarea placeholder="Write here..."></textarea><br><br>
+
+    <!-- Dropdown select -->
+    <label for="options">Choose option:</label>
+    <select id="options">
+      <option>Option 1</option>
+      <option>Option 2</option>
+    </select><br><br>
+
+    <!-- Submit button -->
+    <input type="submit" value="Submit">
+  </form>
+  <br><hr>
+
+  <h2>Thank You!</h2>
+
+        <center>Made with ❤️ by XON</center>
+
+      </td>
+    </tr>
+  </table>
+</center>
+
+</body>
+</html>
+<!-- End of HTML document -->

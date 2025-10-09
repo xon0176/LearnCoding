@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git & GitHub Notes</title>
+</head>
+<body>
+
+    <center>
+  <table>
+    <tr>
+      <td align="left">
+
+<hr>
+    <h1>Git & GitHub Notes</h1>
+    <p> Git is the free and open source distributed version control system that's responsible for everything <br>GitHub related that happens locally on your computer.<br>This cheat sheet features the most important and commonly 
+used Git commands for easy reference.</p>
+<hr>
+    <h2>Installation & GUIs</h2>
+    <p>To install Git, follow the instructions for your operating system:</p>
+    <ul>
+        <li><strong>Windows:</strong> <a href="https://windows.github.com">https://windows.github.com</a></li>
+        <li><strong>macOS:</strong> <a href="https://mac.github.com">https://mac.github.com</a></li>
+        <li><strong>Linux:</strong> <a href="https://linux.github.com">https://linux.github.com</a></li>
+    </ul>
+    Git for all platforms : <a href="https://git-scm.com">https://git-scm.com</a>
+<hr>
+    <h2>Setup</h2>
+    <p>Configuring user information used across all local repositories</p>
+        <ul>
+            <li>
+                <code> git config --global user.name “[firstname lastname]”</code>
+                <br>set a name that is identifiable for credit when reviewing version history
+            </li>
+            <li>
+                <code> git config --global user.email “[valid-email]”</code>
+                <br>set an email address that will be associated with your commits
+            </li>
+            <li>
+                <code> git config --global color.ui auto</code>
+                <br>set automatic command line coloring for Git for easy reviewing
+            </li>
+        </ul>
+<hr>
+    <h2>Setup & Init</h2>
+    <p>Configuring user information, initializing and cloning repositories</p>
+        <ul>
+            <li>
+                <code> git init [project-name]</code>
+                <br>initialize an existing directory as a Git repository
+            </li>
+            <li>
+                <code> git clone [url]</code>
+                <br>retrieve an entire repository from a hosted location via URL
+            </li>
+        </ul>
+<hr>
+    <h2>Stage & Snapshot</h2>
+    <p>Working with snapshots and the Git staging area</p>
+        <ul>
+            <li>
+                <code> git status</code>
+                <br>show modified files in working directory, staged for your next commit
+            </li>
+            <li>
+                <code> git add [file]</code>
+                <br>add a file as it looks now to your next commit (stage)
+            </li>
+            <li>
+                <code> git add .</code>
+                <br>add all changes in the current directory to your next commit (stage)
+            </li>
+            <li>
+                <code> git reset [file]</code>
+                <br>unstage a file while retaining its changes in the working directory
+            </li>
+            <li>
+                <code> git diff </code>
+                <br>diff of what is changed but not staged
+            </li>
+            <li>
+                <code> git diff --staged</code>
+                <br>diff of what is staged but not yet committed
+            </li>
+            <li>
+                <code> git commit -m “[descriptive message]”</code>
+                <br>commit your staged content as a new commit snapshot
+            </li>
+        </ul>
+<hr>
+    <h2>Branch & Merge</h2>
+    <p>Isolating work in branches, changing context, and integrating changes</p>
+        <ul>
+            <li>
+                <code> git branch</code>
+                <br>list your branches. A * will appear next to the currently active branch
+            </li>
+            <li>
+                <code> git branch [branch-name]</code>
+                <br>create a new branch at the current commit
+            </li>
+            <li>
+                <code> git merge [branch-name]</code>
+                <br>merge the specified branch’s history into the current branch
+            </li>
+            <li>
+                <code> git branch -m [old-branch-name] [new-branch-name]</code>
+                <br>rename a branch
+            </li>
+            <li>
+                <code> git branch -d [branch-name]</code>
+                <br>delete a branch
+            </li>
+            <li>
+                <code> git checkout [branch-name]</code>
+                <br>switch to another branch and check it out into your working directory
+            </li>
+        </ul>
+<hr>
+    <h2>Inspect & Compare</h2>
+    <p>Examining logs, diffs and object information</p>
+        <ul>
+            <li>
+                <code> git log</code>
+                <br>show all commits in the current branch’s history
+            </li>
+            <li>
+                <code> git log [first-branch]...[second-branch]</code>
+                <br>show the commits on [second-branch] that are not on [first-branch]
+            </li>
+            <li>
+                <code> git log --follow [file]</code>
+                <br>show the commits that changed [file], even across renames
+            </li>
+            <li>
+                <code> git diff [first-branch]...[second-branch]</code>
+                <br>show the differences between the two branches
+            </li>
+            <li>
+                <code> git show [SHA]</code>
+                <br>show any object in Git in human-readable format
+            </li>
+        </ul>
+<hr>
+    <h2>Tracking Path Changes</h2>
+    <p>Versioning file removes and path changes</p>
+        <ul>
+            <li>
+                <code> git rm [file]</code>
+                <br>delete the file from project and stage the removal for commit
+            </li>
+            <li>
+                <code> git mv [file-original] [file-renamed]</code>
+                <br>change an existing file path and stage the move for commit
+            </li>
+            <li><code> git log --stat -m</code>
+                <br>show all commit logs with indication of any paths that moved
+            </li>
+        </ul>
+<hr>
+    <h2>Ignoring Patterns</h2>
+    <p>Preventing unintentional staging or committing of files</p>
+        <ul>
+            <li>
+                <code> .gitignore</code>
+                <br>create this file in the root of your repository and list patterns of files to ignore
+            </li>
+            <li>
+                <code> git check-ignore -v [file]</code>
+                <br>check if a file is ignored and why
+            </li>
+            <li>
+                <code> git config --global core.excludesfile [file]</code>
+                <br>set a global gitignore file
+            </li>
+        </ul>
+<hr>
+    <h2>Share & Update</h2>
+    <p>Retrieving updates from another repository and updating local repos</p>
+        <ul>
+            <li>
+                <code> git remote -v</code>
+                <br>list all configured remotes
+            </li>
+            <li>
+                <code> git remote add [alias] [url]</code>
+                <br>add a git URL as an alias
+            </li>
+            <li>
+                <code> git fetch [alias]</code>
+                <br>fetch down all the branches from that Git remote
+            </li>
+            <li>
+                <code> git pull</code>
+                <br>fetch and merge changes from the remote branch into your current branch
+            </li>
+            <li>
+                <code> git push</code>
+                <br>push your changes to the remote branch
+            </li>
+        </ul>
+<hr>
+    <h2>Rewrite History</h2>
+    <p>Rewriting branches, updating commits and clearing history</p>
+        <ul>
+            <li>
+                <code> git rebase [branch]</code>
+                <br>apply any commits of current branch ahead of specified one
+            </li>
+            <li>
+                <code> git reset [commit]</code>
+                <br>clear staging area, rewrite working tree from specified commit
+            </li>
+        </ul>
+<hr>
+    <h2>Temporary Commits</h2>
+    <p>Temporarily store modified, tracked files  in order to change branches</p>
+        <ul>
+            <li>
+                <code> git stash</code>
+                <br>save modified and staged changes in a stash for later use
+            </li>
+            <li>
+                <code> git stash list</code>
+                <br>list stack-order of stashed file changes
+            </li>
+            <li>
+                <code> git stash pop</code>
+                <br>write working from top of stash stack and remove from stash list
+            </li>
+            <li>
+                <code> git stash drop</code>
+                <br>remove a single stash entry from the stash list
+            </li>
+        </ul>
+<hr>
+
+  <h2>Thank You!</h2>
+
+        <center>Made with ❤️ by XON</center>
+
+      </td>
+    </tr>
+  </table>
+</center>
+
+</body>
+</html>

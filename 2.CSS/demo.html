@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Demo Playground</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <center>
+  <table>
+    <tr>
+      <td align="left">
+
+  <h1>CSS Demo Playground</h1>
+  <hr><br>
+
+  <!-- NAV -->
+<nav>
+  <h3>Quick Navigation</h3>
+  <ul>
+    <li><a href="#selectors">Selectors</a></li>
+    <li><a href="#colors">Colors</a></li>
+    <li><a href="#text">Text Properties</a></li>
+    <li><a href="#box">Box Model</a></li>
+    <li><a href="#display">Display</a></li>
+    <li><a href="#alpha">Alpha Channel</a></li>
+    <li><a href="#units">Units</a></li>
+    <li><a href="#positioning">Positioning</a></li>
+    <li><a href="#backgrounds">Backgrounds</a></li>
+    <li><a href="#flexbox">Flexbox</a></li>
+    <li><a href="#media">Media Queries</a></li>
+    <li><a href="#transitions">Transitions</a></li>
+    <li><a href="#transform">Transforms</a></li>
+    <li><a href="#animations">Animations</a></li>
+  </ul>
+</nav>
+  <br><hr><br>
+
+  <!-- SELECTORS -->
+  <h2 id="selectors">Selectors</h2>
+  <p>(Universal selector applies to all elements → margin/padding reset)</p>
+  <h1>Type Selector Demo (h1 styled)</h1>
+  <p class="myClass">Class Selector Demo (.myClass)</p>
+  <p id="myId">ID Selector Demo (#myId)</p>
+  <br><hr><br>
+
+  <!-- COLORS -->
+  <h2 id="colors">Colors</h2>
+  <p class="color-named">Named Color Example (soft green)</p>
+  <p class="color-rgb">RGB Example (light red)</p>
+  <p class="color-hex">HEX Example (light blue)</p>
+  <div class="color-rgba">RGBA Example (transparent pastel background)</div>
+  <br><hr><br>
+
+  <!-- TEXT PROPERTIES (clear, labeled demos) -->
+  <h2 id="text">Text Properties</h2>
+
+  <h4>Font Family</h4>
+  <p class="text-serif">Serif paragraph — font-family: Georgia, 'Times New Roman', serif;</p>
+  <p class="text-sans">Sans-serif paragraph — font-family: Arial, Helvetica, sans-serif;</p>
+  <br>
+
+  <h4>Font Size</h4>
+  <p class="text-16">Font size 16px</p>
+  <p class="text-24">Font size 24px</p>
+  <br>
+
+  <h4>Font Weight</h4>
+  <p class="weight-300">Weight 300 (light)</p>
+  <p class="weight-400">Weight 400 (normal)</p>
+  <p class="weight-700">Weight 700 (bold)</p>
+  <br>
+
+  <h4>Line Height (unitless best practice)</h4>
+  <p class="lh-1 demo-box">Line-height: 1 — tight lines of text stacked closely.</p>
+  <p class="lh-15 demo-box">Line-height: 1.5 — standard comfortable reading.</p>
+  <p class="lh-2 demo-box">Line-height: 2 — very spacious lines.</p>
+  <br>
+
+  <h4>Text Align</h4>
+  <p class="align-left">Left aligned text.</p>
+  <p class="align-center">Center aligned text.</p>
+  <p class="align-right">Right aligned text.</p>
+  <p class="align-center demo-chip">Centered text.</p>
+  <p class="align-justify demo-box">Justified text stretches each line to fill the width, creating straight left and right edges across the block.</p>
+  <br>
+
+  <h4>Text Decoration</h4>
+  <p class="dec-underline">Underline</p>
+  <p class="dec-lthrough">Line-through</p>
+  <p class="dec-overline">Overline</p>
+  <br>
+
+  <h4>Text Transform</h4>
+  <p class="transform-upper">uppercase transformation</p>
+  <p class="transform-lower">LOWERCASE TRANSFORMATION</p>
+  <p class="transform-cap">capitalize each word</p>
+  <br>
+
+  <h4>Spacing & Indent</h4>
+  <p class="letter-wide">Letter-spacing widened by 2px.</p>
+  <p class="letter-tight">Letter-spacing tightened slightly.</p>
+  <p class="word-wide">Word-spacing widened for clarity.</p>
+  <p class="indent">This first line is indented by 2em to show paragraph indentation.</p>
+  <br><hr><br>
+
+  <!-- BOX MODEL (visual, labeled) -->
+  <h2 id="box">Box Model</h2>
+
+  <ul class="legend">
+    <li><span class="legend-swatch swatch-margin"></span> Margin (outside spacing)</li>
+    <li><span class="legend-swatch swatch-border"></span> Border (edge outline)</li>
+    <li><span class="legend-swatch swatch-padding"></span> Padding (inside spacing)</li>
+    <li><span class="legend-swatch swatch-content"></span> Content (text/image area)</li>
+  </ul>
+
+  <div class="bm-stage">
+    <!-- Wrapper gives environment so margin gap is visible -->
+    <div class="bm-wrap">
+      <div class="bm-border">
+        <div class="bm-padding">
+          <div class="bm-content">
+            Content area (width/height measured here)
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="bm-note">
+      The empty space around the yellow wrapper is the <b>margin</b>.
+      The green area is <b>padding</b>, the dotted outline is the <b>border</b>,
+      and the inner white box is the <b>content</b>.
+    </p>
+  </div>
+
+  <h4>Shorthand Examples</h4>
+  <p class="demo-chip">padding: 10px 20px; → top/bottom 10px, left/right 20px</p>
+  <p class="demo-chip">margin: 5px 10px 15px 20px; → top/right/bottom/left</p>
+  <br>
+
+  <h4>Fixed Size Boxes</h4>
+  <div class="box1">Box1 → width, height, padding, margin, border</div><br>
+  <div class="box2">Box2 → padding & margin shorthands, radius</div>
+  <br><hr><br>
+
+  <!-- DISPLAY -->
+  <h2 id="display">Display Property</h2>
+  <span class="inline-example">Inline</span>
+  <span class="inline-example">Example</span>
+  <br><br>
+  <div class="block-example">Block Example (takes full width)</div>
+  <br>
+  <div class="inline-block-example">Inline-Block</div>
+  <div class="inline-block-example">Inline-Block</div>
+  <br><br>
+  <div class="hidden-example">This is hidden (display: none)</div>
+  <div class="invisible-example">This is invisible (visibility: hidden)</div>
+  <br><hr><br>
+
+  <!-- ALPHA -->
+  <h2 id="alpha">Alpha Channel</h2>
+  <p class="alpha-bg">Semi-transparent pastel green background</p>
+  <p class="alpha-text">Semi-transparent soft red text</p>
+  <br><hr><br>
+
+  <!-- UNITS -->
+  <h2 id="units">Units in CSS</h2>
+
+  <h4>Absolute Units</h4>
+  <p class="demo-chip" style="font-size:0.5in;">This text is 0.5in tall</p>
+  <p class="demo-chip" style="font-size:0.5cm;">This text is 0.5cm tall</p>
+  <p class="demo-chip" style="font-size:16px;">This text is 16px</p>
+
+  <br>
+
+  <h4>Relative Units</h4>
+  <div style="font-size:16px;">
+    <p class="demo-chip" style="font-size:1em;">1em (same as parent)</p>
+    <p class="demo-chip" style="font-size:1.5em;">1.5em (larger)</p>
+    <p class="demo-chip" style="font-size:150%;">150% (relative to parent)</p>
+  </div>
+  <br>
+
+  <h4>Viewport Units</h4>
+  <p class="demo-chip" style="font-size:2vw;">Font-size: 2vw (scales with width)</p>
+  <p class="demo-chip" style="font-size:2vh;">Font-size: 2vh (scales with height)</p>
+  <br><hr><br>
+
+  <h2 id="positioning">Positioning</h2>
+
+<h4>Static (default)</h4>
+<div class="pos-stage">
+  <div class="pos-static">Static Box (default flow)</div>
+</div>
+<br>
+
+<h4>Relative</h4>
+<div class="pos-stage">
+  <div class="pos-relative">Relative Box (moved 20px down, 20px right)</div>
+</div>
+<br>
+
+<h4>Absolute</h4>
+<p class="demo-chip">See first line of this document for the absolute positioning example.</p>
+<div class="pos-stage">
+  <div class="pos-absolute">Absolute Box (placed top-left of stage)</div>
+</div>
+<br>
+
+<h4>Fixed</h4>
+<p class="demo-chip">Scroll page to see Fixed Box stick at bottom-right.</p>
+<div class="pos-fixed">Fixed Box</div>
+<br>
+
+<h4>Sticky</h4>
+<p class="demo-chip">Scroll the page — the sticky box will stick to the top of the main site.</p>
+<div class="pos-sticky">Sticky Box (sticks to top of page while scrolling)</div>
+
+<br><hr><br>
+
+  <h2 id="backgrounds">Backgrounds</h2>
+
+<ul>
+  <li>Background-size: cover</li>
+  <div class="bg-demo cover"></div><br>
+
+  <li>Background-size: contain</li>
+  <div class="bg-demo contain"></div><br>
+
+  <li>Background-size: auto</li>
+  <div class="bg-demo auto"></div>
+</ul>
+
+<br><hr><br>
+
+  <h2 id="flexbox">Flexbox</h2>
+
+<h4>1. flex-direction</h4>
+<p class="demo-chip">flex-direction: row;</p>
+<div class="flex-row">
+  <div class="flex-item">1</div>
+  <div class="flex-item">2</div>
+  <div class="flex-item">3</div>
+</div><br>
+
+<p class="demo-chip">flex-direction: column;</p>
+<div class="flex-column">
+  <div class="flex-item">A</div>
+  <div class="flex-item">B</div>
+  <div class="flex-item">C</div>
+</div><br><hr><br>
+
+<h4>2. flex Wrap</h4>
+
+<p class="demo-chip">nowrap (boxes stay in one row, may overflow)</p>
+<div class="flex-nowrap">
+  <div class="flex-item">1</div>
+  <div class="flex-item">2</div>
+  <div class="flex-item">3</div>
+  <div class="flex-item">4</div>
+  <div class="flex-item">5</div>
+</div><br>
+
+<p class="demo-chip">wrap (boxes move to next line when no space)</p>
+<div class="flex-wrap-demo">
+  <div class="flex-item">1</div>
+  <div class="flex-item">2</div>
+  <div class="flex-item">3</div>
+  <div class="flex-item">4</div>
+  <div class="flex-item">5</div>
+</div><br><hr><br>
+
+<h4>3. justify-content</h4>
+<p class="demo-chip">flex-start (default)</p>
+<div class="flex-justify-start">
+  <div class="flex-item">A</div><div class="flex-item">B</div><div class="flex-item">C</div>
+</div><br>
+
+<p class="demo-chip">center (aligns items to center)</p>
+<div class="flex-justify-center">
+  <div class="flex-item">A</div><div class="flex-item">B</div><div class="flex-item">C</div>
+</div><br>
+
+<p class="demo-chip">space-between (distributes items evenly)</p>
+<div class="flex-justify-between">
+  <div class="flex-item">A</div><div class="flex-item">B</div><div class="flex-item">C</div>
+</div><br>
+
+<p class="demo-chip">space-around (distributes items evenly with space around)</p>
+<div class="flex-justify-around">
+  <div class="flex-item">A</div><div class="flex-item">B</div><div class="flex-item">C</div>
+</div><br><hr><br>
+
+<h4>4. align-items</h4>
+
+<p class="demo-chip">align-items: stretch (items expand to fill height)</p>
+<div class="flex-align-stretch">
+  <div class="flex-item">A</div>
+  <div class="flex-item">B</div>
+  <div class="flex-item">C</div>
+</div><br>
+
+<p class="demo-chip">align-items: center (aligned in the middle)</p>
+<div class="flex-align-center">
+  <div class="flex-item">A</div>
+  <div class="flex-item">B</div>
+  <div class="flex-item">C</div>
+</div><br>
+
+<p class="demo-chip">align-items: flex-start (aligned at the top)</p>
+<div class="flex-align-start">
+  <div class="flex-item">A</div>
+  <div class="flex-item">B</div>
+  <div class="flex-item">C</div>
+</div><br>
+
+<p class="demo-chip">align-items: flex-end (aligned at the bottom)</p>
+<div class="flex-align-end">
+  <div class="flex-item">A</div>
+  <div class="flex-item">B</div>
+  <div class="flex-item">C</div>
+</div><br>
+
+<h4>5. flex-grow</h4>
+<p class="demo-chip">Extra space is distributed by grow values</p>
+<div class="flex-grow-demo">
+  <div class="flex-item grow1">grow1</div>
+  <div class="flex-item grow2">grow2</div>
+  <div class="flex-item grow3">grow3</div>
+</div><br><hr><br>
+
+<h4>6. flex-shrink</h4>
+<p class="demo-chip">When space is too small, higher shrink shrinks faster</p>
+<div class="flex-shrink-demo">
+  <div class="flex-item shrink1">shrink1</div>
+  <div class="flex-item shrink2">shrink2</div>
+  <div class="flex-item shrink3">shrink3</div>
+</div><br><hr><br>
+
+<h4>7. flex-basis</h4>
+<p class="demo-chip">Items start at their basis width before growing/shrinking.</p>
+<div class="flex-basis-demo">
+  <div class="flex-item basis50">basis 50px</div>
+  <div class="flex-item basis100">basis 100px</div>
+  <div class="flex-item basis150">basis 150px</div>
+</div>
+<p class="demo-chip">Resize the container → items respect basis first, then grow/shrink.</p>
+<br><hr><br>
+
+  <h2 id="media">Media Queries</h2>
+<p class="demo-chip">Resize the window to see background color changes:</p>
+
+<div class="media-box mobile-first">I change color at breakpoints</div>
+<br>
+
+  <h2 id="transitions">Transitions</h2>
+
+<h4>transition-property</h4>
+<button class="btn-trans-property">Property</button>
+
+<h4>transition-duration</h4>
+<button class="btn-trans-duration">Duration</button>
+
+<h4>transition-timing-function</h4>
+<button class="btn-trans-timing">Ease-in-out</button>
+
+<h4>transition-delay</h4>
+<button class="btn-trans-delay">With Delay</button>
+
+<br><hr><br>
+
+<h2 id="transform">Transforms</h2>
+
+<h4>1. Translate</h4>
+<div class="tf-demo">
+  <div class="tf-box translate">Translate 40px</div>
+</div>
+
+<h4>2. Rotate</h4>
+<div class="tf-demo">
+  <div class="tf-box rotate">Rotate 90deg</div>
+</div>
+
+<h4>3. Scale</h4>
+<div class="tf-demo">
+  <div class="tf-box scale">Scale 1.5</div>
+</div>
+
+<h4>4. Skew</h4>
+<div class="tf-demo">
+  <div class="tf-box skew">Skew 20deg</div>
+</div>
+<br><hr><br>
+
+<h2 id="animations">Animations</h2>
+
+<h4>1. animation-name & duration</h4>
+<p class="demo-chip">Moves box right over 2s</p>
+<div class="anim-demo">
+  <div class="anim-box anim-duration">instantly</div>
+</div>
+
+<h4>2. animation-timing-function</h4>
+<p class="demo-chip">Compare easing functions</p>
+<div class="anim-demo">
+  <div class="anim-box anim-ease">ease</div>
+  <div class="anim-box anim-linear">linear</div>
+  <div class="anim-box anim-ease-in">ease-in</div>
+  <div class="anim-box anim-ease-out">ease-out</div>
+</div>
+
+<h4>3. animation-delay</h4>
+<p class="demo-chip">Starts 2s late</p>
+<div class="anim-demo">
+  <div class="anim-box anim-delay">delay 2s</div>
+</div>
+
+<h4>4. animation-iteration-count</h4>
+<p class="demo-chip">Repeats 3 times</p>
+<div class="anim-demo">
+  <div class="anim-box anim-repeat">3x</div>
+</div>
+
+<h4>5. animation-direction</h4>
+<p class="demo-chip">Alternate (goes forward then backward)</p>
+<div class="anim-demo">
+  <div class="anim-box anim-alternate">↔</div>
+</div>
+<br><hr><br>
+
+<h2>Thank You!</h2>
+
+        <center>Made with ❤️ by XON</center>
+
+      </td>
+    </tr>
+  </table>
+</center>
+
+</body>
+</html>
