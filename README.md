@@ -7,10 +7,13 @@ This repository serves as my structured notebook — covering everything from we
 
 
 ## 🔗 Notes Link
-- **Main index.html** → [https://xon0176.github.io/LearnCoding/](https://xon0176.github.io/LearnCoding/)  
+- **MAIN index.html** → [https://xon0176.github.io/LearnCoding/](https://xon0176.github.io/LearnCoding/)  
 - **HTML file index.html** → [https://xon0176.github.io/LearnCoding/HTML/index.html](https://xon0176.github.io/LearnCoding/HTML/index.html)  
 - **CSS file index.html** → [https://xon0176.github.io/LearnCoding/CSS/index.html](https://xon0176.github.io/LearnCoding/CSS/index.html)  
-- **CSS file demo.html** → [https://xon0176.github.io/LearnCoding/CSS/demo.html](https://xon0176.github.io/LearnCoding/CSS/demo.html)  
+- **CSS file demo.html** → [https://xon0176.github.io/LearnCoding/CSS/demo.html](https://xon0176.github.io/LearnCoding/CSS/demo.html)
+- **JAVASCRIPT file index.html** → [https://xon0176.github.io/LearnCoding/JAVASCRIPT/index.html](https://xon0176.github.io/LearnCoding/JAVASCRIPT/index.html)
+- **GIT&GITHUB file index.html** → [https://xon0176.github.io/LearnCoding/GIT&GITHUB/index.html](https://xon0176.github.io/GIT&GITHUB/index.html)
+- **PYTHON file demo.html** → [https://xon0176.github.io/LearnCoding/PYTHON/index.html](https://xon0176.github.io/LearnCoding/PYTHON/index.html)
 
 ---
 
@@ -48,3 +51,4 @@ Since this is a private repo:
 ## ❤️ Credits
 Made with curiosity and consistency.  
 This repo is part of my self-learning journey in programming.  
+
