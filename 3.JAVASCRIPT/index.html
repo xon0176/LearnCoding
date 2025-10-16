@@ -6,58 +6,186 @@
     <title>JavaScript Notes</title>
 </head>
 <body>
+    <script src="script.js"></script>
+
     <center>
   <table>
     <tr>
       <td align="left">
 
-    <h1>Chapter 1</h1>
+    <h2>Chapter 1 : Introduction, Variables & Data Types</h2>
 
-    <h2>What is JavaScript?</h2>
+    <h3>What is JavaScript?</h3>
     <p>JavaScript is a programming language. We use it to give instructions to the computer.</p>
-    Input (code) -> Computer -> Output (result)
+    Input (code) &rarr; Computer &rarr; Output (result)
 
-    <h2>Our 1st JS code</h2>
+    <h3>Our 1st JS code</h3>
     <p>Console.log is used to log(print) a message To the console.</p>
     <pre><code>console.log("Hello World!");</code></pre>
+    <p>if we wanna clear console we have to use ctrl + L[Windows] or cmd + K[Mac]</p>
 
-    <h2>Variables in JS</h2>
+    <h3>Variable Naming Notations</h3>
+    <ul>
+        <li>fullName &rarr; Camel Case </li>
+        <li>full_name &rarr; Snake Case </li>
+        <li>full-name &rarr; Kebab Case </li>
+        <li>FullName &rarr; Pascal Case </li>
+        <li>fullname &rarr; Lower Case </li>
+        <li>FULLNAME &rarr; Upper Case </li>
+    </ul>
+
+    <h3>Variables in JS</h3>
     <p>Variables are containers for data</p>
-        <h3>Variable Rules</h3>
+
+        <h4>Variable Rules</h4>
         <ul>
             <li>Variable names are case sensitive; “a” & “A” is different.</li>
             <li>Only letters, digits, underscore( _ ) and $ is allowed. (not even space)</li>
             <li>Only a letter, underscore( _ ) or $ should be 1st character.</li>
             <li>Reserved words cannot be variable names.</li>
         </ul>
-        <h3>Variable Declaration</h3>
+
+        <h4>Variable Declaration</h4>
         <ul>
-            <li>var : Variable can be re-declared and updated. A global scope variable. (old way)</li>
+            <li>var : Variable can be re-declared and updated. A global scope variable. (old way / Before 2015)</li>
             <li>let : Variable cannot be re-declared but can be updated. A block scope variable. (new way)</li>
             <li>const : Variable cannot be re-declared or updated. A block scope variable. (new way)</li>
         </ul>
-    
-    <h2>Data Types in JS</h2>
-    <h3>Primitive Data Types</h3>
-    <p>Primitive data types are the most basic data types in JavaScript.</p>
+
+    <h3>Data Types in JS</h3>
+
+        <h4>Primitive Data Types</h4>
+        <p>Primitive data types are the most basic data types in JavaScript.</p>
         <ul>
             <li>String : Represents a sequence of characters.</li>
             <li>Number : Represents numeric values.</li>
             <li>Boolean : Represents true/false values.</li>
-            <li>Undefined : Represents a variable that has been declared but has not yet been assigned a value.</li>
             <li>Null : Represents the intentional absence of any object value.</li>
+            <li>Undefined : Represents a variable that has been declared but has not yet been assigned a value.</li>
+            <li>BigInt : Represents integers with arbitrary precision.</li>
             <li>Symbol : Represents a unique and immutable value.</li>
         </ul>
-    <h3>Non-Primitive Data Types</h3>
-    <p>Non-primitive data types are more complex data types.</p>
+
+        <h4>Non-Primitive Data Types</h4>
+        <p>Non-primitive data types are more complex data types.</p>
         <ul>
             <li>Object : Represents a collection of key-value pairs.</li>
             <li>Array : Represents an ordered list of values.</li>
             <li>Function : Represents a reusable block of code.</li>
+            <li>Date : Represents a specific point in time.</li>
         </ul>
 
-    <h1>Chapter 2</h1>
+        <h4>Type Coercion</h4>
+        <p>Type coercion is the automatic or implicit conversion of values from one data type to another.</p>
+        <ul>
+            <li>1 + 2 // 3</li>
+            <li>"1" + "2" // "12"</li>
+            <li>"1" + 2 // "12"</li>
+            <li>1 + "2" // "12"</li>
+        </ul>
 
+    <h2>Chapter 2 : Comments, Operators & Conditional Statements</h2>
+
+    <h3>Comments in JS</h3>
+    <p>Part of Code which is <B>not executed</B> </p>
+        <pre><code>// This is a single line comment
+        /* This is multi-line
+            comment. */
+        </code></pre>
+
+    <h3>Operators in JS</h3>
+    <p>used to perform some operations on data</p>
+
+        <h4>Arithmetic Operators</h4>
+        <ul>
+            <li>+ : Addition</li>
+            <li>- : Subtraction</li>
+            <li>* : Multiplication</li>
+            <li>/ : Division</li>
+            <li>% : Modulus (Remainder)</li>
+            <li>** : Exponentiation (Power)</li>
+        </ul>
+
+        <h4>Unary Operators</h4>
+        <ul>
+            <li>++ : Increment (increases a variable's value by 1)</li>
+            <li>-- : Decrement (decreases a variable's value by 1)</li>
+        </ul>
+
+        <h4>Assignment Operators</h4>
+        <ul>
+            <li>= : Assigns a value to a variable</li>
+            <li>+= : Adds and assigns the result to the variable</li>
+            <li>-= : Subtracts and assigns the result to the variable</li>
+            <li>*= : Multiplies and assigns the result to the variable</li>
+            <li>/= : Divides and assigns the result to the variable</li>
+            <li>%= : Takes modulus and assigns the result to the variable</li>
+            <li>**= : Exponentiation and assigns the result to the variable</li>
+        </ul>
+
+        <h4>Comparison Operators</h4>
+        <ul>
+            <li>== : Equal to</li>
+            <li>=== : Strict equal to (checks value and type)</li>
+            <li>!= : Not equal to</li>
+            <li>!== : Strict not equal to (checks value and type)</li>
+            <li>> : Greater than</li>
+            <li>< : Less than</li>
+            <li>>= : Greater than or equal to</li>
+            <li><= : Less than or equal to</li>
+        </ul>
+
+        <h4>Logical Operators</h4>
+        <ul>
+            <li>&& : Logical AND (true if both operands are true)</li>
+            <li>|| : Logical OR (true if at least one operand is true)</li>
+            <li>! : Logical NOT (inverts the boolean value)</li>
+        </ul>
+
+    <h3>Conditional Statements</h3>
+    <p>to implement some condition in the code</p>
+
+        <h4>if statement</h4>
+        <pre><code>if (condition) {
+                code to be executed if condition is true
+            }</code></pre>
+
+        <h4>if...else statement</h4>
+        <pre><code>if (condition) {
+                code to be executed if condition is true
+            } else {
+                code to be executed if condition is false
+            }</code></pre>
+
+        <h4>if...else if...else statement</h4>
+        <pre><code>if (condition1) {
+                code to be executed if condition1 is true
+            } else if (condition2) {
+                code to be executed if condition2 is true
+            } else {
+                code to be executed if both conditions are false
+            }</code></pre>
+
+        <h4>Ternary operator</h4>
+        <p>A shorthand for if...else statements</p>
+        <pre><code>condition ? expr1 : expr2</code></pre>
+
+        <h4>switch statement</h4>
+        <pre><code>switch (expression) {
+                case value1:
+                    code to be executed if expression === value1
+                    break;
+                case value2:
+                    code to be executed if expression === value2
+                    break;
+                ...
+                default:
+                    code to be executed if expression doesn't match any case
+            }</code></pre>
+
+        
+
+    <h2>Chapter 3 : Loops & Functions</h2>
 
         <center>Made with ❤️ by XON</center>
 
