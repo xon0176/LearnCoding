@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: Arial; background:#111; color:#0f0; text-align:center; }
+    .time-box { font-size: 28px; margin: 15px; }
+    .label { font-size: 18px; color:#fff; }
+  </style>
+</head>
+<body>
+
+  <div class="time-box">
+    <div class="label">🇺🇸 New York (UTC-4 / -5)</div>
+    <div id="nyTime"></div>
+  </div>
+
+  <div class="time-box">
+    <div class="label">🇮🇳 India (UTC +5:30)</div>
+    <div id="inTime"></div>
+  </div>
+
+<script>
+function updateTime() {
+  const now = new Date();
+
+  // New York Time
+  const nyTime = new Date(now.toLocaleString("en-US", { timeZone: "America/New_York" }));
+
+  // India Time
+  const inTime = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Kolkata" }));
+
+  function format(t) {
+    return t.toLocaleTimeString('en-US', { hour12:false });
+  }
+
+  document.getElementById("nyTime").innerText = format(nyTime);
+  document.getElementById("inTime").innerText = format(inTime);
+}
+
+setInterval(updateTime, 1000);
+updateTime();
+</script>
+
+</body>
+</html>
